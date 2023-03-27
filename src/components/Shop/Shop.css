@@ -10,19 +10,22 @@
   gap: 45px;
   margin-left: 100px;
   /* margin-right: 80px; */
-  margin-top: 150px;
+  margin-top: 47px;
 }
 
 .cart-container {
   background-color: gainsboro;
   color: black;
-  height: 500px;
-  margin-top: 40px;
+  height: 510px;
+  margin-top: 47px;
   border-radius: 5px;
   margin-right: 10px;
+}
+.cart-container h3 {
+  color: green;
+  text-align: center;
 }
 
 .summary-section {
   text-align: center;
-  margin-right: 20px;
 }

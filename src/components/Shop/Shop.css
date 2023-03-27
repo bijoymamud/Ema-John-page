@@ -14,7 +14,7 @@
 }
 
 .cart-container {
-  background-color: gainsboro;
+  background: #ffe0b3;
   color: black;
   height: 510px;
   margin-top: 47px;
@@ -27,5 +27,5 @@
 }
 
 .summary-section {
-  text-align: center;
+  padding-left: 10px;
 }

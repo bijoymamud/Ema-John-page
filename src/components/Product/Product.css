@@ -13,8 +13,7 @@
 }
 
 .product-name {
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin: 0;
   font-family: "Lato";
   font-style: normal;
   font-weight: 400;
@@ -28,6 +27,8 @@
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
+  margin-top: 8px;
+  margin-bottom: 25px;
 }
 
 .product-info {
@@ -36,14 +37,13 @@
 }
 
 .seller-ratting-info {
-  margin-top: 10px;
+  margin: 0px;
   font-family: "Lato";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 14px;
   letter-spacing: 0.004em;
-  position: absolute;
 }
 .manufacture-name {
   margin-bottom: 0px;
@@ -60,4 +60,8 @@
 .btn-cart:hover {
   background: green;
   color: white;
+}
+
+.icone {
+  margin-left: 10px;
 }

@@ -6,6 +6,9 @@ const Shop = () => {
 
     const [products, setProducts] = useState([]);
 
+    // for showing how many product I selected (order summary)
+    const [cart, setCarts] = useState([]);
+
     useEffect(() => {
 
         fetch('products.json')
@@ -13,6 +16,16 @@ const Shop = () => {
             .then(data => setProducts(data))
 
     }, [])
+
+
+    //adding event handler for showing product in the summary div
+
+    const handleAddToCart = (product) => {
+        const newCart = [...cart, product];
+        setCarts(newCart);
+    }
+
+
 
     return (
         <div className='shop-container'>
@@ -25,6 +38,7 @@ const Shop = () => {
                         key={product.id}
                         product={product}
 
+                        handleAddToCart={handleAddToCart}
 
                     ></Product>)
                 }
@@ -32,10 +46,13 @@ const Shop = () => {
             </div>
 
             <div className='cart-container'>
-                <h3>Order summary</h3>
+                <div className='summary-section'>
+                    <h3>Order summary</h3>
+                    <p>Selected Items: {cart.length}</p>
+                </div>
             </div>
 
-        </div>
+        </div >
     );
 };
 

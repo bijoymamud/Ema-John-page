@@ -24,8 +24,31 @@ const Shop = () => {
 
     useEffect(() => {
         const storedCart = getShoppingCart();
-        console.log(storedCart);
-    }, [])
+        const saveCart = [];
+
+        //step-1 : get id from localStorage
+        for (const id in storedCart) {
+
+            // step: 2 : get the product buy using id
+            const addedProduct = products.find(product => product.id === id);
+
+
+            if (addedProduct) {
+                // step 3: get the quantity of the product
+                const quantity = storedCart[id];
+                addedProduct.quantity = quantity;
+                //step 4: add the added Product to the saveCart
+                saveCart.push(addedProduct);
+
+
+            }
+            // console.log('added Product', addedProduct);
+        }
+
+        //step 5: set the cart
+        setCarts(saveCart);
+
+    }, [products])
 
 
     //adding event handler for showing product in the summary div
@@ -69,3 +92,4 @@ const Shop = () => {
 };
 
 export default Shop;
+

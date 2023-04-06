@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Cart from '../Cart/Cart';
 import ReviewItems from '../ReviewItems/ReviewItems';
 import "./Order.css";
 
 const Orders = () => {
-    const cart = useLoaderData();
-    console.log(cart);
+    const savedCart = useLoaderData();
+
+    const [cart, setCart] = useState(savedCart);
+
+    const handleRemoveFromCart = (id) => {
+        const remaining = cart.filter(product => product.id !== id);
+        setCart(remaining);
+    }
+
     return (
         <div className='shop-container'>
 
@@ -17,6 +24,7 @@ const Orders = () => {
 
                         key={product.id}
                         product={product}
+                        handleRemoveFromCart={handleRemoveFromCart}
 
                     ></ReviewItems>)
                 }

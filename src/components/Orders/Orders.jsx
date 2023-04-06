@@ -9,7 +9,9 @@ const Orders = () => {
     console.log(cart);
     return (
         <div className='shop-container'>
+
             <div className='review-container'>
+                <h2 className='order-title'>Products Placed for Order : </h2>
                 {
                     cart.map(product => <ReviewItems
 

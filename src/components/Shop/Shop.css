@@ -19,15 +19,13 @@
   height: 510px;
   margin-top: 47px;
   border-radius: 5px;
-  margin-right: 10px;
+  margin-right: 20px;
+
   position: sticky;
   top: 0;
 }
-.cart-container h3 {
-  color: green;
-  text-align: center;
-}
-
-.summary-section {
-  padding-left: 10px;
+.cart-container {
+  color: black;
+  text-align: start;
+  padding-left: 30px;
 }

@@ -6,11 +6,13 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Checkout from './components/Checkout/Checkout';
 import Inventory from './components/Inventory/Inventory';
 import Home from './components/Layout/Home';
 import LogIn from './components/LogIn/LogIn';
 import Orders from './components/Orders/Orders';
 import Shop from './components/Shop/Shop';
+import SignUp from './components/SingUp/SignUp';
 import cartProductsLoader from './Loaders/cardProductsLoader';
 
 const router = createBrowserRouter([
@@ -32,10 +34,18 @@ const router = createBrowserRouter([
         path: 'inventory',
         element: <Inventory></Inventory>
       },
+      {
+        path: 'checkout',
+        element: <Checkout></Checkout>
+      },
 
       {
         path: 'logIn',
         element: <LogIn></LogIn>
+      },
+      {
+        path: 'signup',
+        element: <SignUp></SignUp>
       }
     ]
   }

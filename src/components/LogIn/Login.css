@@ -1,0 +1,55 @@
+.form-container {
+  width: 500px;
+  height: 700px;
+  margin: 200px auto;
+  border: 1px solid #95a0a7;
+  border-radius: 8px;
+  padding-left: 40px;
+}
+
+.form-titile {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 42px;
+  /* identical to box height */
+
+  letter-spacing: 0.0025em;
+
+  color: white;
+  text-align: center;
+}
+
+.form-control label {
+  display: block;
+  font-size: x-large;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.form-control input {
+  width: 415px;
+  height: 55px;
+  left: 518px;
+  top: 322px;
+
+  border: 1px solid #95a0a7;
+  border-radius: 5px;
+  font-family: "Lato";
+  font-size: larger;
+  padding-left: 20px;
+}
+
+.signup-btn {
+  font-family: "Lato";
+  margin-top: 30px;
+  width: 440px;
+  height: 55px;
+
+  background: rgba(242, 231, 17, 0.627);
+  border-radius: 5px;
+  font-size: larger;
+  /* font-weight: bold; */
+  color: white;
+}

@@ -12,8 +12,22 @@ nav.header a {
   text-decoration: none;
   color: white;
   margin-left: 30px;
+  font-family: "Lato";
+  font-size: x-large;
 }
 
 nav.header a:hover {
-  color: yellowgreen;
+  color: rgba(242, 231, 17, 0.9);
+}
+
+.gmail {
+  margin-left: 30px;
+}
+.btn-top {
+  background-color: rgba(242, 231, 17, 0.9);
+  font-family: "Lato";
+  font-size: large;
+  font-weight: bold;
+  margin-left: 5px;
+  color: rgb(218, 112, 20);
 }

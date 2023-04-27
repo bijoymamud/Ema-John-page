@@ -12,7 +12,13 @@ const LogIn = () => {
                     <label htmlFor="">Password</label>
                     <input type="password" name='password' placeholder='Your password' required />
 
-                    <button className='signup-btn'>Log In</button>
+                    {/* <input className='signup-btn'>Log In</input> */}
+
+                    <input className='login-btn' type="submit" value="Log In" />
+                    <p>
+                        New to Ema-John?
+
+                    </p>
                 </div>
             </form>
         </div>

@@ -1,0 +1,11 @@
+.sub-title {
+  text-align: center;
+  font-size: larger;
+}
+
+.link {
+  text-decoration: none;
+  color: orange;
+  margin-left: 5px;
+  font-family: "Lato";
+}

@@ -43,9 +43,10 @@
 
 .login-btn {
   font-family: "Lato";
-  margin-top: 30px;
-  width: 440px;
+  margin: 30px auto;
+  width: 450px;
   height: 55px;
+  text-align: center;
 
   background: rgba(242, 231, 17, 0.9);
   border-radius: 5px;

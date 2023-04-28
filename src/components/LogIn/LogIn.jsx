@@ -1,12 +1,18 @@
-import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../providers/AuthProvider';
 import "./Login.css";
 
 const LogIn = () => {
 
+    const [show, setShow] = useState(false);
 
     const { singIn, setUser } = useContext(AuthContext);
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    console.log(location);
+    const from = location.state?.form?.pathname || '/';
 
 
     const handleLogIn = event => {
@@ -26,6 +32,7 @@ const LogIn = () => {
                 setUser(loggesUser);
 
                 form.reset();
+                navigate(from, { replace: true })
             })
             .catch(error => {
                 console.log(error.message);
@@ -39,7 +46,15 @@ const LogIn = () => {
                     <label htmlFor="">Email</label>
                     <input type="email" name='email' id='' placeholder='Your Email address' required />
                     <label htmlFor="">Password</label>
-                    <input type="password" name='password' placeholder='Your password' required />
+                    <input type={show ? "text" : "password"} name='password' placeholder='Your password' required />
+                    <p onClick={() => setShow(!show)}>
+                        <small>
+                            {
+                                show ? <span>Hide Password</span> : <span>Show Password</span>
+
+                            }
+                        </small>
+                    </p>
 
                     {/* <input className='signup-btn'>Log In</input> */}
 
